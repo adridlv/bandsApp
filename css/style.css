@@ -7,3 +7,38 @@ body {
 main{
 	flex: 1 0 auto;
 }
+
+.group-element{
+	display:inline-block;
+	width:30%;
+	margin:1%;
+	text-align:center;
+}
+
+.group-element img{
+	width:250px;
+	height:250px;
+	display:block;
+	margin:0 auto;
+	border-radius:2em;
+}
+
+.artist-element{
+	display:block;
+	width:100%;
+	height:auto;
+}
+
+.imgArtist{
+	width:100%;
+	height:auto;
+	margin:2em;
+}
+
+.artist-name{
+	text-align:center;
+}
+
+.header-image-group{
+	
+}

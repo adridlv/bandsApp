@@ -1,0 +1,15 @@
+<section class="container" ng-controller="artistManager">
+	
+	<div class="artist-element" ng-repeat="group in groups | filter: {name: nameFilter}:true">
+	
+		<art-background></art-background>
+
+		<h2 class="artist-name">{{group.name | uppercase}} | {{group.decade}}</h2>
+		
+		<img class="imgArtist" src="{{group.image}}" alt="">
+
+		<ol>
+			<li ng-repeat="song in group.songs">{{song}}</li>
+		</ol>
+	</div>	
+</section> 

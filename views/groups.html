@@ -1,0 +1,30 @@
+<section class="container" ng-controller="groupManager">
+	<form>
+		<input placeholder="Search by name" type="text" ng-model="nameFilter">
+
+		<div class="button-list">
+			<span>
+				<a name="group1" class="waves-effect waves-light btn" ng-model="decadeFilter" ng-click="decadeFilter = ''">All</a>
+			</span>
+			<span>
+				<a name="group1" class="waves-effect waves-light btn" ng-model="decadeFilter" value="1960" ng-click="decadeFilter = 1960">'60s</a>
+			</span>
+			<span>
+				<a name="group1" class="waves-effect waves-light btn" ng-model="decadeFilter" value="1970" ng-click="decadeFilter = 1970" >'70s</a>
+			</span>
+			<span>
+				<a name="group1" class="waves-effect waves-light btn" ng-model="decadeFilter" value="1980"
+				ng-click="decadeFilter = 1980">'80s</a>
+			</span>
+
+			<span>
+				<a name="group1" class="waves-effect waves-light btn" ng-model="decadeFilter" value="1990"
+				ng-click="decadeFilter = 1990">'90s</a>
+			</span>
+		</div>	
+	</form>
+
+	<div class="group-element" ng-repeat="group in groups | filter: {name: nameFilter, decade: decadeFilter}">
+		<art-element></art-element>
+	</div>	
+</section> 
