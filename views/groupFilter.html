@@ -1,0 +1,9 @@
+<section class="container" ng-controller="decadeManager">
+	<form>
+		<input placeholder="Search by name" type="text" ng-model="nameFilter">
+	</form>
+
+	<div class="group-element" ng-repeat="group in groups | filter: {name: nameFilter, decade: decadeFilter}">
+		<art-element></art-element>
+	</div>	
+</section> 

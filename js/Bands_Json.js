@@ -60,6 +60,6 @@
     "image":"http://img.thesun.co.uk/aidemitlum/archive/02738/ironmaiden_land8_2738052a.jpg",
     "decade":1980,
     "songs":["Fear of the Dark","The Trooper"],
-    "background": "http://www.nacion.com/ocio/musica/Iron-Maiden-Costa-Rica_LNCIMA20160308_0170_1.jpg"
+    "background": "https://eatsleeplistenrepeat.files.wordpress.com/2015/10/iron-maiden.jpg"
   }
 ]

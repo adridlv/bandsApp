@@ -10,6 +10,10 @@ app.config(['$routeProvider',function($routeProvider) {
 		templateUrl: "views/artist.html",
 		controller: "artistManager"
 	})
+	.when("/decade/:decadeFilter",{
+		templateUrl: "views/groupFilter.html",
+		controller: "decadeManager"
+	})
 	.otherwise({
 		redirectTo: "/"
 	})
@@ -23,6 +27,14 @@ app.controller("groupManager", ['$scope','$http', function($scope, $http){
 
 app.controller("artistManager", ['$scope','$http', "$routeParams", function($scope, $http, $routeParams){
 	$scope.nameFilter = $routeParams.groupName;
+
+	$http.get("js/Bands_Json.js").success (function (data){
+		$scope.groups = data;
+	});
+}]);
+
+app.controller("decadeManager", ['$scope','$http', "$routeParams", function($scope, $http, $routeParams){
+	$scope.decadeFilter = $routeParams.decadeFilter;
 
 	$http.get("js/Bands_Json.js").success (function (data){
 		$scope.groups = data;
